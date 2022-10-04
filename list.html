@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel='stylesheet' href='./todoList.css'/>
+  <!--Bootstrap-->
+  <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css' rel='stylesheet'
+    integrity='sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT' crossorigin='anonymous'>
+    <script src="./showTasks.js"></script>
+    <script src="./addTask.js"></script>
+
+
+
+  <title>ToDo Liste</title>
+</head>
+
+<body>
+  <form id='logoutForm'>
+    <button type='submit' id='logoutButton' class='btn btn-dark'> Logout</button>
+  </form>
+
+  <div id='container'>
+
+    <h1 id='addTaskTitle'>Add new Task</h1>
+    <form id='newTaskForm'>
+      <input type='text' id='inputTitle' required>
+      <button type='submit' id='submitButton' class='btn btn-outline-dark'>Add</button>
+    </form>
+    <div id='todoListContainer'>
+      <h1 id='toDoTitle'>ToDo: </h1>
+      <table id='table'>
+        <tr>
+          <th>Id</th>
+          <th id='taskWidth'>Task</th>
+          <th>Status</th>
+          <th>Edit</th>
+          <th>Select to delete</th>
+        </tr>
+      </table>
+
+      <form id='deleteForm'>
+        <div id='check'>
+        </div>
+        <button id='deleteButton' type='submit' class='btn btn-outline-dark'>Delete</button>
+      </form>
+
+      <div id='editTitleForm'>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
