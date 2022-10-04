@@ -6,12 +6,11 @@ document.addEventListener("DOMContentLoaded", () => {
   newTaskForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    if(inputId.value == "" || inputId.value == undefined) {
-      createTask()
+    if (inputId.value == "" || inputId.value == undefined) {
+      createTask();
     } else {
-      updateTask()
+      updateTask();
     }
-
   });
 });
 

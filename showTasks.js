@@ -10,7 +10,7 @@ function showTasks(tasks) {
     const tabledelete = document.createElement("button");
     const tableEdit = document.createElement("button");
     //Hier wird die Delete Funktion gemacht
-    tabledelete.innerText = "Delete";
+    tabledelete.innerText = "🗑️";
     tabledelete.onclick = () => {
       if (confirm("Are you sure you want to delete the task")) {
         fetch(`http://localhost:3000/task/${task.id}`, {
@@ -25,14 +25,12 @@ function showTasks(tasks) {
 
     // Hier wird die Edit Funktion gemacht
 
-    tableEdit.innerText = "Edit";
+    tableEdit.innerText = "✏️";
     tableEdit.onclick = () => {
-        if (confirm("Want you to edit this Task?")) {
-            inputTitle.value = task.title
-            inputId.value = task.id
-
-
-    }
+      if (confirm("Want you to edit this Task?")) {
+        inputTitle.value = task.title;
+        inputId.value = task.id;
+      }
     };
 
     // Hier werden die Daten vorbereitet für die übergabe
@@ -47,7 +45,7 @@ function showTasks(tasks) {
     taskDeleteCell.append(tabledelete);
     taskEditCell.append(tableEdit);
     taskTable.append(tableColums);
-    // Hier wird alles in die Colums gepackt. 
+    // Hier wird alles in die Colums gepackt.
     tableColums.append(taskId, taskTitle, taskDeleteCell, taskEditCell);
   });
 }
@@ -55,7 +53,6 @@ function showTasks(tasks) {
 document.addEventListener("DOMContentLoaded", () => {
   loadTasks();
 });
-
 
 // Läd die Tasks
 function loadTasks() {
@@ -70,20 +67,19 @@ function loadTasks() {
 }
 
 function updateTask() {
-    
-    fetch("http://localhost:3000/tasks", {
-        method: "Put",
-        credentials: "include",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          id: inputId.value,
-          title: inputTitle.value,
-        }),
-      })
-        .then((response) => response.json())
-        .then(() => {
-          window.location.reload();
-        });
+  fetch("http://localhost:3000/tasks", {
+    method: "Put",
+    credentials: "include",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      id: inputId.value,
+      title: inputTitle.value,
+    }),
+  })
+    .then((response) => response.json())
+    .then(() => {
+      window.location.reload();
+    });
 }

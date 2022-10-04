@@ -1,70 +1,66 @@
 #container {
-    margin: 50px 50px 50px;
-    border: 3px solid black;
-    border-radius: 15px;
+  margin: 50px 50px 50px;
+  border: 3px solid black;
+  border-radius: 15px;
 }
 
-
 #logoutButton {
-    float: right;
-    margin-top: -45px;
-    margin-right: 5px;
-    margin-bottom: 20px;
+  float: right;
+  margin-top: -45px;
+  margin-right: 5px;
+  margin-bottom: 20px;
 }
 
 #addTaskTitle {
-    text-align: center;
-    margin-top: 20px;
+  text-align: center;
+  margin-top: 20px;
 }
 
 #todoListContainer {
-    display: block;
-    margin-left: 25%;
-
+  display: block;
+  margin-left: 25%;
 }
 
 #inputTitle {
-    display: block;
-    width: 500px;
-    height: 30px;
-    margin: 0 auto;
+  display: block;
+  width: 500px;
+  height: 30px;
+  margin: 0 auto;
 }
-#inputId{
-    display: block;
-    width: 150px;
-    height: 30px;
-    margin: 0 auto;
+#inputId {
+  display: block;
+  width: 150px;
+  height: 30px;
+  margin: 0 auto;
 }
 
 #submitButton {
-    display: block;
-    width: 75px;
-    height: 50px;
-    margin: 0 auto;
-    margin-top: 10px;
+  display: block;
+  width: 75px;
+  height: 50px;
+  margin: 0 auto;
+  margin-top: 10px;
 }
 
 td {
-    padding-right: 5em;
+  padding-right: 5em;
 }
 
 td:nth-child(2) {
-    word-wrap: break-word;
-    word-break: break-all;
-    width: 400px;
+  word-wrap: break-word;
+  word-break: break-all;
+  width: 400px;
 }
 
 #deleteButton {
-    margin-left: 90%;
-    width: 100px;
+  margin-left: 90%;
+  width: 100px;
 }
-#inputOnLine{
-    display:flex;
-    justify-content: center;
-   
+#inputOnLine {
+  display: flex;
+  justify-content: center;
 }
 
 .inline {
-    display: inline-block;
+  display: inline-block;
 }
-
