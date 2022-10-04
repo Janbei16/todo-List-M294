@@ -27,7 +27,10 @@
 
     <h1 id='addTaskTitle'>Add new Task</h1>
     <form id='newTaskForm'>
+      <div id="inputOnLine">
       <input type='text' id='inputTitle' required>
+      <input type='number' id='inputId' readonly placeholder="Nummer der Task">
+    </div>
       <button type='submit' id='submitButton' class='btn btn-outline-dark'>Add</button>
     </form>
     <div id='todoListContainer'>

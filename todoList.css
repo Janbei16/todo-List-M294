@@ -29,6 +29,12 @@
     height: 30px;
     margin: 0 auto;
 }
+#inputId{
+    display: block;
+    width: 150px;
+    height: 30px;
+    margin: 0 auto;
+}
 
 #submitButton {
     display: block;
@@ -51,4 +57,11 @@ td:nth-child(2) {
 #deleteButton {
     margin-left: 90%;
     width: 100px;
+}
+#inputOnLine{
+
+   display: inline-flex;
+}
+#newTaskForm{
+    
 }

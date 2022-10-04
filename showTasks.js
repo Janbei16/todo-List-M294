@@ -23,34 +23,31 @@ function showTasks(tasks) {
       }
     };
 
+    // Hier wird die Edit Funktion gemacht
+
     tableEdit.innerText = "Edit";
     tableEdit.onclick = () => {
-      fetch("http://localhost:3000/tasks", {
-        method: "Put",
-        credentials: "include",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          id: task.id,
-          title: inputTitle.value,
-        }),
-      })
-        .then((response) => response.json())
-        .then(() => {
-          window.location.reload();
-        });
+        if (confirm("Want you to edit this Task?")) {
+            inputTitle.value = task.title
+            inputId.value = task.id
+
+
+    }
     };
+
+    // Hier werden die Daten vorbereitet für die übergabe
 
     taskId.innerText = task.id;
     taskTitle.innerText = task.title;
 
     taskTitle.className = "taskTitle";
     taskTitle.id = task.id;
+
+    // Hier werden die Daten in Delete und in Edit Cell eingefügt(append)
     taskDeleteCell.append(tabledelete);
     taskEditCell.append(tableEdit);
-
     taskTable.append(tableColums);
+    // Hier wird alles in die Colums gepackt. 
     tableColums.append(taskId, taskTitle, taskDeleteCell, taskEditCell);
   });
 }
@@ -59,6 +56,8 @@ document.addEventListener("DOMContentLoaded", () => {
   loadTasks();
 });
 
+
+// Läd die Tasks
 function loadTasks() {
   fetch("http://localhost:3000/tasks", {
     method: "GET",
@@ -68,4 +67,23 @@ function loadTasks() {
     .then((data) => {
       showTasks(data);
     });
+}
+
+function updateTask() {
+    
+    fetch("http://localhost:3000/tasks", {
+        method: "Put",
+        credentials: "include",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          id: inputId.value,
+          title: inputTitle.value,
+        }),
+      })
+        .then((response) => response.json())
+        .then(() => {
+          window.location.reload();
+        });
 }
