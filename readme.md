@@ -6,6 +6,7 @@ Applikation ToDo Liste
 - Erstellen von Tasks
 - Bearbeiten von Tasks
 - Löschen von Task
+- Login HTML und CSS
 ___
 
 Info
